@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorkha Kitchen - インド・ネーパル料理 | Indian & Nepali Cuisine</title>
+    <meta name="description" content="Experience authentic Indian and Nepali cuisine at Gorkha Kitchen in Nagoya, Japan. Traditional flavors, fresh ingredients, and warm hospitality. 名古屋市熱田区大宝">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-utensils me-2"></i>Gorkha Kitchen
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-10 fade-in">
+                        <h1 class="hero-title">Welcome to Gorkha Kitchen</h1>
+                        <p class="hero-subtitle">インド・ネーパル料理 | Indian & Nepali Cuisine</p>
+                        <p class="hero-description">Experience the rich flavors and warm hospitality of India and Nepal in every bite</p>
+                        <a href="#menu" class="btn btn-primary btn-lg mt-4">メニューを見る | View Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-image-wrapper fade-in-left">
+                        <img src="images/ゴルカキッチン20251120(550ⅹ110mm).png" alt="Gorkha Kitchen Restaurant" class="img-fluid rounded-image shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in-right">
+                    <h2 class="section-title mb-4">Our Story / 私たちのストーリー</h2>
+                    <p class="lead">Gorkha Kitchen brings you the authentic taste of Indian and Nepali cuisine, prepared with love and traditional recipes passed down through generations.</p>
+                    <p>Our mission is to share the rich culinary heritage of India and Nepal with food lovers around the world. We use only the freshest ingredients and traditional cooking methods to create dishes that are both authentic and delightful.</p>
+                    <p>From spicy momos to aromatic curries, every dish at Gorkha Kitchen tells a story of our homeland - its culture, its people, and its vibrant flavors. Located in Nagoya, Japan, we bring the warmth and hospitality of the Himalayas to your table.</p>
+                    <div class="mt-4">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="feature-box">
+                                    <i class="fas fa-leaf text-primary mb-2"></i>
+                                    <h5>Fresh Ingredients</h5>
+                                    <p>Daily sourced, locally grown produce</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="feature-box">
+                                    <i class="fas fa-fire text-danger mb-2"></i>
+                                    <h5>Traditional Recipes</h5>
+                                    <p>Authentic methods and secret spices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center fade-in">
+                    <h2 class="section-title">ランチメニュー | Lunch Menu</h2>
+                    <p class="section-subtitle">ナン・ライス お変わり自由！ | Naan & Rice Refills Free!</p>
+                    <p class="mt-2 text-muted">辛さは下からお選びください | Please choose your spice level: 甘口 | 普通 | 中辛 | 激辛</p>
+                </div>
+            </div>
+
+            <!-- Lunch Curry Sets -->
+            <div class="menu-category mb-5">
+                <h3 class="category-title text-center mb-4 fade-in">ランチカレーセット | Lunch Curry Set</h3>
+                <p class="text-center text-muted mb-4">カレー + ナンまたはライス + サラダ + ドリンク<br>Curry + Naan or Rice + Salad + Drink</p>
+                <div class="row g-4" id="menuItems">
+                <!-- Menu items will be populated here -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="images/P039922454_480.jpg" alt="日替わりカレーセット" class="menu-image" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <h5 class="menu-title">(A) 日替わりカレーセット</h5>
+                            <p class="menu-description">毎日変わる特別なカレーセット。カレー + ナンまたはライス + サラダ + ドリンク</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">¥890</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="images/P039922454_480.jpg" alt="豆カレーセット" class="menu-image" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <h5 class="menu-title">(B) 豆カレーセット</h5>
+                            <p class="menu-description">栄養たっぷりの豆を使ったヘルシーなカレーセット。カレー + ナンまたはライス + サラダ + ドリンク</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">¥840</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="images/P039922454_480.jpg" alt="エビカレーセット" class="menu-image" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <h5 class="menu-title">(C) エビカレーセット</h5>
+                            <p class="menu-description">新鮮なエビを使った贅沢なカレーセット。カレー + ナンまたはライス + サラダ + ドリンク</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">¥920</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="images/P039922454_480.jpg" alt="野菜カレーセット" class="menu-image" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <h5 class="menu-title">(D) 野菜カレーセット</h5>
+                            <p class="menu-description">季節の野菜たっぷりのヘルシーなカレーセット。カレー + ナンまたはライス + サラダ + ドリンク</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">¥880</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="images/P039922454_480.jpg" alt="キーマカレーセット" class="menu-image" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <h5 class="menu-title">(E) キーマカレーセット</h5>
+                            <p class="menu-description">ひき肉を使ったスパイシーなキーマカレーセット。カレー + ナンまたはライス + サラダ + ドリンク</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">¥930</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="images/P039922454_480.jpg" alt="チキンカレーセット" class="menu-image" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <h5 class="menu-title">(F) チキンカレーセット</h5>
+                            <p class="menu-description">やわらかいチキンと香り高いスパイスが調和した定番のカレーセット。カレー + ナンまたはライス + サラダ + ドリンク</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">¥890</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="images/P039922454_480.jpg" alt="マトンカレーセット" class="menu-image" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <h5 class="menu-title">(G) マトンカレーセット</h5>
+                            <p class="menu-description">ネパリ風のマトンカレーセット。カレー + ナンまたはライス + サラダ + ドリンク</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">¥950</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                        <div class="menu-image-wrapper">
+                            <img src="images/P039922454_480.jpg" alt="ほうれん草パニールカレーセット" class="menu-image" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <h5 class="menu-title">(H) ほうれん草パニールカレーセット</h5>
+                            <p class="menu-description">ほうれん草とパニールチーズを使った濃厚なカレーセット。カレー + ナンまたはライス + サラダ + ドリンク</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">¥950</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Takari Kana Sets -->
+            <div class="menu-category mb-5 mt-5">
+                <h3 class="category-title text-center mb-4 fade-in">タカリカナセット | Takari Kana Set</h3>
+                <p class="text-center text-muted mb-4">カレー + ライス + 豆スープ + ピクルス + パパド<br>Curry + Rice + Bean Soup + Pickle + Papad<br><small class="text-success">※ライス・豆スープ お変わり自由！ | Rice & Bean Soup Refills Free!</small><br><small class="text-info">+150円でソフトドリンクを追加できます | +¥150 for Soft Drinks</small></p>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="menu-card">
+                            <div class="menu-image-wrapper">
+                                <img src="images/P039922454_480.jpg" alt="野菜カレー" class="menu-image" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h5 class="menu-title">野菜カレー</h5>
+                                <p class="menu-description">季節の野菜たっぷりのカレー + ライス + 豆スープ + ピクルス + パパド</p>
+                                <div class="menu-footer">
+                                    <span class="menu-price">¥990</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="menu-card">
+                            <div class="menu-image-wrapper">
+                                <img src="images/P039922454_480.jpg" alt="チキンカレー" class="menu-image" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h5 class="menu-title">チキンカレー</h5>
+                                <p class="menu-description">やわらかいチキンカレー + ライス + 豆スープ + ピクルス + パパド</p>
+                                <div class="menu-footer">
+                                    <span class="menu-price">¥1090</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="menu-card">
+                            <div class="menu-image-wrapper">
+                                <img src="images/P039922454_480.jpg" alt="マトンカレー" class="menu-image" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h5 class="menu-title">マトンカレー</h5>
+                                <p class="menu-description">ジューシーなマトンカレー + ライス + 豆スープ + ピクルス + パパド</p>
+                                <div class="menu-footer">
+                                    <span class="menu-price">¥1190</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biryani Sets -->
+            <div class="menu-category mb-5 mt-5">
+                <h3 class="category-title text-center mb-4 fade-in">ビリヤニセット | Biryani Set</h3>
+                <p class="text-center text-muted mb-4">ビリヤニ + サラダ + ドリンク<br>Biryani + Salad + Drink<br><small class="text-info">+300円でタンドリーチキンを追加できます | +¥300 for Tandoori Chicken</small></p>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="menu-card">
+                            <div class="menu-image-wrapper">
+                                <img src="images/07_95_biryani_01.jpg" alt="野菜ビリヤニセット" class="menu-image" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h5 class="menu-title">野菜ビリヤニセット</h5>
+                                <p class="menu-description">香り高い野菜ビリヤニ + サラダ + ドリンク</p>
+                                <div class="menu-footer">
+                                    <span class="menu-price">¥1150</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="menu-card">
+                            <div class="menu-image-wrapper">
+                                <img src="images/07_95_biryani_01.jpg" alt="チキンビリヤニセット" class="menu-image" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h5 class="menu-title">チキンビリヤニセット</h5>
+                                <p class="menu-description">スパイシーなチキンビリヤニ + サラダ + ドリンク</p>
+                                <div class="menu-footer">
+                                    <span class="menu-price">¥1250</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="menu-card">
+                            <div class="menu-image-wrapper">
+                                <img src="images/07_95_biryani_01.jpg" alt="マトンビリヤニセット" class="menu-image" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h5 class="menu-title">マトンビリヤニセット</h5>
+                                <p class="menu-description">濃厚なマトンビリヤニ + サラダ + ドリンク</p>
+                                <div class="menu-footer">
+                                    <span class="menu-price">¥1350</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add-ons and Drinks -->
+            <div class="menu-category mb-5 mt-5">
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="addon-card shadow-sm p-4 rounded">
+                            <h4 class="text-center mb-4">+350円セットアップグレード</h4>
+                            <p class="text-center text-muted mb-3">下記に変更または追加できます：</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>チーズナン (Cheese Naan)</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>ハニーチーズナン (Honey Cheese Naan)</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>タンドリーチキン (Tandoori Chicken)</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>チキンティッカ (Chicken Tikka)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="addon-card shadow-sm p-4 rounded">
+                            <h4 class="text-center mb-4">ソフトドリンク | Soft Drinks</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-coffee text-primary me-2"></i>チャイ（アイス/ホット）Chai (Ice/Hot)</li>
+                                <li class="mb-2"><i class="fas fa-coffee text-primary me-2"></i>コーヒー（アイス/ホット）Coffee (Ice/Hot)</li>
+                                <li class="mb-2"><i class="fas fa-glass-water text-primary me-2"></i>ウーロン茶 Oolong Tea</li>
+                                <li class="mb-2"><i class="fas fa-glass-water text-primary me-2"></i>マンゴージュース Mango Juice</li>
+                            </ul>
+                            <p class="text-center text-info mt-3 mb-0">
+                                <small>+50円でラッシ/マンゴーラッシに変更できます<br>+¥50 to change to Lassi/Mango Lassi</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center fade-in">
+                    <h2 class="section-title">Gallery</h2>
+                    <p class="section-subtitle">A glimpse into our kitchen and dishes</p>
+                </div>
+            </div>
+            <div class="row g-3" id="galleryGrid">
+                <!-- Gallery images will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img id="modalImage" src="" alt="Gallery Image" class="img-fluid">
+                </div>
+                <div class="modal-footer border-0 justify-content-between">
+                    <button class="btn btn-outline-light" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <button class="btn btn-outline-light" id="nextBtn">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center fade-in">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-subtitle">インド・ネーパル料理 | Indian & Nepali Cuisine</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="contact-card shadow-lg">
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="contact-info text-center">
+                                    <i class="fas fa-map-marker-alt text-primary mb-3"></i>
+                                    <h5>Address / 住所</h5>
+                                    <p class="mb-2">
+                                        <strong>〒456-0062</strong><br>
+                                        愛知県名古屋市熱田区大宝1丁目5-17コーポ
+                                    </p>
+                                    <p class="text-muted" style="font-size: 0.9rem;">
+                                        Aichi-ken Nagoya-shi Atsuta-ku<br>
+                                        Taiho 1-chome 5-17 Copo
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-info text-center">
+                                    <i class="fas fa-phone text-primary mb-3"></i>
+                                    <h5>Phone / 電話</h5>
+                                    <p><a href="tel:07035192002" class="text-decoration-none text-dark">070-3519-2002</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <div class="text-center">
+                            <h5 class="mb-3">料理長 / head chef</h5>
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 mb-2">
+                                    <p class="mb-0">GHIMIRE</p>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <p class="mb-0">THAKUR</p>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <p class="mb-0">PRASSAD</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <div class="text-center">
+                            <h5 class="mb-3">Follow Us / フォローしてください</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+                            </div>
+                            <div class="text-center mt-4">
+                                <a href="#home" class="btn btn-outline-primary">
+                                    <i class="fas fa-arrow-up me-2"></i>Top / トップへ戻る
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2024 Gorkha Kitchen. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Made with <i class="fas fa-heart text-danger"></i> for authentic Nepali cuisine</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
