@@ -286,6 +286,170 @@ preloadImage.as = 'image';
 preloadImage.href = 'images/gorkha restudent (5).png';
 document.head.appendChild(preloadImage);
 
+// ============================================
+// Auto Sliders
+// ============================================
+
+// Food images for small home gallery slider
+const homeGalleryImages = [
+    'MOMO-500x500.jpg',
+    'Jhol-Momo-in-spicy-tomato-sauce-nepali-recipe.jpg',
+    'Tibetan-Veggie-Momos-1.jpg.webp',
+    'P039922454_480.jpg',
+    '07_95_biryani_01.jpg'
+];
+
+// Food images for full-width gallery slider
+const fullWidthGalleryImages = [
+    '07_95_biryani_01.jpg',
+    'Jhol-Momo-in-spicy-tomato-sauce-nepali-recipe.jpg',
+    'MOMO-500x500.jpg',
+    'P039922454_480.jpg',
+    'Tibetan-Veggie-Momos-1.jpg.webp',
+    'a45df21f1fe6efb5dc4344437b77b69a.jpg'
+];
+
+// Restaurant interior and staff images (using available images)
+const interiorStaffImages = [
+    'gorkha restudent (5).png',
+    'Gorkha Kitchen (1800 x 910 mm)1023kb.png',
+    'ゴルカキッチン20251120(550ⅹ110mm).png'
+];
+
+// Small Home Gallery Auto Slider (3-second auto slide)
+function initSmallHomeGallerySlider() {
+    const sliderTrack = document.getElementById('smallSliderTrack');
+    if (!sliderTrack) return;
+
+    // Create slide items
+    homeGalleryImages.forEach((imageName) => {
+        const slideItem = document.createElement('div');
+        slideItem.className = 'small-slide-item';
+        
+        const img = document.createElement('img');
+        img.src = `images/${imageName}`;
+        img.alt = 'Food Gallery Image';
+        img.loading = 'lazy';
+        
+        slideItem.appendChild(img);
+        sliderTrack.appendChild(slideItem);
+    });
+
+    let currentIndex = 0;
+    const totalSlides = homeGalleryImages.length;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Auto-slide every 3 seconds
+    setInterval(nextSlide, 3000);
+}
+
+// Full-Width Gallery Auto Slider with Navigation
+function initFullWidthGallerySlider() {
+    const sliderTrack = document.getElementById('fullSliderTrack');
+    const prevBtn = document.getElementById('fullSliderPrev');
+    const nextBtn = document.getElementById('fullSliderNext');
+    
+    if (!sliderTrack) return;
+
+    // Create slide items
+    fullWidthGalleryImages.forEach((imageName) => {
+        const slideItem = document.createElement('div');
+        slideItem.className = 'full-slide-item';
+        
+        const img = document.createElement('img');
+        img.src = `images/${imageName}`;
+        img.alt = 'Food Gallery Image';
+        img.loading = 'lazy';
+        
+        slideItem.appendChild(img);
+        sliderTrack.appendChild(slideItem);
+    });
+
+    let currentIndex = 0;
+    const totalSlides = fullWidthGalleryImages.length;
+
+    function updateSlider() {
+        sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    // Navigation buttons
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Pause on hover
+    const sliderWrapper = sliderTrack.parentElement;
+    if (sliderWrapper) {
+        let autoSlideInterval = setInterval(nextSlide, 5000);
+        
+        sliderWrapper.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+        
+        sliderWrapper.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        });
+    }
+}
+
+// Restaurant Interior & Staff Gallery Auto Slider
+function initInteriorStaffSlider() {
+    const sliderTrack = document.getElementById('interiorSliderTrack');
+    if (!sliderTrack) return;
+
+    // Create slide items
+    interiorStaffImages.forEach((imageName) => {
+        const slideItem = document.createElement('div');
+        slideItem.className = 'interior-slide-item';
+        
+        const img = document.createElement('img');
+        img.src = `images/${imageName}`;
+        img.alt = 'Restaurant Interior or Staff Image';
+        img.loading = 'lazy';
+        
+        slideItem.appendChild(img);
+        sliderTrack.appendChild(slideItem);
+    });
+
+    let currentIndex = 0;
+    const totalSlides = interiorStaffImages.length;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Auto-slide every 4 seconds
+    setInterval(nextSlide, 4000);
+}
+
+// Initialize all sliders on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initSmallHomeGallerySlider();
+    initFullWidthGallerySlider();
+    initInteriorStaffSlider();
+});
+
 // Console message (for debugging)
 console.log('🍜 Gorkha Kitchen website loaded successfully!');
 

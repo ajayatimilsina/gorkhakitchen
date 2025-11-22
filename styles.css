@@ -108,10 +108,185 @@ html {
     background: rgba(255, 167, 38, 0.1);
 }
 
+/* Homepage Header Slide */
+.homepage-header-slide {
+    background: #ffffff;
+    padding: 2rem 0;
+    margin-top: 76px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-slide-content {
+    text-align: center;
+}
+
+.header-logo {
+    max-width: 100%;
+    max-height: 120px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Small Home Gallery Auto Slider */
+.home-gallery-slider {
+    background: #f8f9fa;
+}
+
+.small-gallery-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.small-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.small-slider-track {
+    display: flex;
+    transition: transform 0.6s ease;
+    will-change: transform;
+}
+
+.small-slide-item {
+    min-width: 100%;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.small-slide-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Full-Width Gallery Auto Slide */
+.full-width-gallery-section {
+    background: var(--light-bg);
+}
+
+.full-width-gallery-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+}
+
+.full-slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.full-slider-track {
+    display: flex;
+    transition: transform 0.8s ease;
+    height: 100%;
+    will-change: transform;
+}
+
+.full-slide-item {
+    min-width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+}
+
+.full-slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow:hover {
+    background: var(--white);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.slider-arrow-left {
+    left: 20px;
+}
+
+.slider-arrow-right {
+    right: 20px;
+}
+
+.slider-arrow i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Restaurant Interior & Staff Gallery */
+.interior-staff-gallery-section {
+    background: var(--white);
+}
+
+.interior-staff-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.interior-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.interior-slider-track {
+    display: flex;
+    transition: transform 0.6s ease;
+    will-change: transform;
+}
+
+.interior-slide-item {
+    min-width: 100%;
+    flex-shrink: 0;
+    padding: 15px;
+}
+
+.interior-slide-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Hero Section */
 .hero-section {
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,7 +295,7 @@ html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 .hero-overlay {
@@ -639,10 +814,48 @@ section {
         margin: 0.25rem 0;
     }
 
+    /* Homepage Header Slide */
+    .homepage-header-slide {
+        padding: 1.5rem 0;
+        margin-top: 66px;
+    }
+
+    .header-logo {
+        max-height: 80px;
+    }
+
+    /* Small Gallery Slider */
+    .small-slide-item img {
+        height: 150px;
+    }
+
+    /* Full-Width Gallery */
+    .full-width-gallery-slider {
+        height: 300px;
+    }
+
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-arrow-left {
+        left: 10px;
+    }
+
+    .slider-arrow-right {
+        right: 10px;
+    }
+
+    /* Interior Staff Gallery */
+    .interior-slide-item img {
+        height: 250px;
+    }
+
     /* Hero Section */
     .hero-section {
-        min-height: 80vh;
-        padding-top: 70px;
+        min-height: 60vh;
+        padding-top: 40px;
         background-attachment: scroll; /* Better performance on mobile */
     }
 

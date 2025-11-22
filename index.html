@@ -47,6 +47,28 @@
         </div>
     </nav>
 
+    <!-- Homepage Header Slide -->
+    <div class="homepage-header-slide">
+        <div class="container">
+            <div class="header-slide-content">
+                <img src="images/Gorkha Kitchen (1800 x 910 mm)1023kb.png" alt="Gorkha Kitchen Logo" class="header-logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- Small Home Gallery Auto Slider -->
+    <section class="home-gallery-slider py-4">
+        <div class="container">
+            <div class="small-gallery-slider">
+                <div class="small-slider-wrapper">
+                    <div class="small-slider-track" id="smallSliderTrack">
+                        <!-- Images will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Home Section -->
     <section id="home" class="hero-section">
         <div class="hero-overlay"></div>
@@ -366,17 +388,40 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section py-5">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center fade-in">
-                    <h2 class="section-title">Gallery</h2>
-                    <p class="section-subtitle">A glimpse into our kitchen and dishes</p>
+    <!-- Full-Width Gallery Auto Slide -->
+    <section id="gallery" class="full-width-gallery-section py-5">
+        <div class="container-fluid p-0">
+            <div class="full-width-gallery-slider">
+                <div class="full-slider-wrapper">
+                    <div class="full-slider-track" id="fullSliderTrack">
+                        <!-- Images will be loaded dynamically -->
+                    </div>
+                    <button class="slider-arrow slider-arrow-left" id="fullSliderPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-arrow slider-arrow-right" id="fullSliderNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
-            <div class="row g-3" id="galleryGrid">
-                <!-- Gallery images will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- Restaurant Interior & Staff Gallery -->
+    <section class="interior-staff-gallery-section py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center fade-in">
+                    <h2 class="section-title">店舗・スタッフ | Restaurant & Staff</h2>
+                    <p class="section-subtitle">Our warm atmosphere and friendly team</p>
+                </div>
+            </div>
+            <div class="interior-staff-slider">
+                <div class="interior-slider-wrapper">
+                    <div class="interior-slider-track" id="interiorSliderTrack">
+                        <!-- Images will be loaded dynamically -->
+                    </div>
+                </div>
             </div>
         </div>
     </section>
