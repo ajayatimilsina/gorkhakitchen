@@ -68,11 +68,24 @@ html {
     font-weight: 700;
     color: var(--white) !important;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand:hover {
     color: var(--accent-color) !important;
     transform: translateY(-2px);
+}
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.navbar-brand:hover .navbar-logo {
+    transform: scale(1.05);
 }
 
 .nav-link {
@@ -118,6 +131,7 @@ html {
 
 .header-slide-content {
     text-align: center;
+    position: relative;
 }
 
 .header-logo {
@@ -126,6 +140,34 @@ html {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.promo-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 150px;
+    height: auto;
+    z-index: 10;
+    animation: pulse 2s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .promo-badge {
+        max-width: 100px;
+        top: 10px;
+        right: 10px;
+    }
 }
 
 /* Small Home Gallery Auto Slider */
