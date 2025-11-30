@@ -88,6 +88,20 @@ html {
     transform: scale(1.05);
 }
 
+/* Desktop Navbar Logo */
+@media (min-width: 992px) {
+    .navbar-logo {
+        height: 55px;
+    }
+}
+
+/* Mobile Navbar Logo */
+@media (max-width: 767px) {
+    .navbar-logo {
+        height: 40px;
+    }
+}
+
 .nav-link {
     color: rgba(255, 255, 255, 0.9) !important;
     font-weight: 500;
@@ -135,11 +149,27 @@ html {
 }
 
 .header-logo {
-    max-width: 110%;
-    max-height: 700px;
+    max-width: 100%;
+    width: 100%;
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Desktop Header Logo */
+@media (min-width: 992px) {
+    .header-logo {
+        max-width: 90%;
+        max-height: 600px;
+    }
+}
+
+/* Tablet Header Logo */
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-logo {
+        max-width: 95%;
+        max-height: 500px;
+    }
 }
 
 .promo-badge {
@@ -949,7 +979,8 @@ section {
     }
 
     .header-logo {
-        max-height: 80px;
+        max-height: 250px;
+        max-width: 95%;
     }
 
     /* Small Gallery Slider */
@@ -1138,6 +1169,141 @@ section {
     }
 }
 
+/* Tablet Styles (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-logo {
+        max-height: 400px;
+    }
+
+    .menu-card {
+        margin-bottom: 2rem;
+    }
+
+    .menu-content {
+        padding: 1.5rem;
+    }
+
+    .contact-card {
+        padding: 2.5rem;
+    }
+
+    .navbar-logo {
+        height: 48px;
+    }
+}
+
+/* Desktop Styles (992px and above) */
+@media (min-width: 992px) {
+    /* Enhanced Desktop Header */
+    .homepage-header-slide {
+        padding: 3rem 0;
+    }
+
+    /* Desktop Menu Cards */
+    .menu-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Desktop Menu Content */
+    .menu-content {
+        padding: 2rem;
+    }
+
+    .menu-title {
+        font-size: 1.4rem;
+    }
+
+    .menu-description {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .menu-price {
+        font-size: 1.6rem;
+    }
+
+    /* Desktop Contact Card */
+    .contact-card {
+        padding: 4rem;
+    }
+
+    /* Desktop Chef Cards */
+    .chef-photo-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .chef-name {
+        font-size: 1.75rem;
+    }
+
+    .chef-description {
+        font-size: 1rem;
+        padding: 0 1.5rem;
+    }
+
+    /* Desktop Gallery */
+    .gallery-item {
+        margin-bottom: 2rem;
+    }
+
+    /* Desktop Sections */
+    section {
+        padding: 5rem 0;
+    }
+
+    .section-title {
+        font-size: 2.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.25rem;
+    }
+
+    /* Desktop Hero */
+    .hero-section {
+        min-height: 85vh;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.2rem;
+    }
+}
+
+/* Large Desktop Styles (1200px and above) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .menu-card {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+/* Extra Small Mobile (max-width: 576px) */
 @media (max-width: 576px) {
     .hero-title {
         font-size: 1.75rem;
@@ -1161,6 +1327,19 @@ section {
 
     .contact-card {
         padding: 1.25rem;
+    }
+
+    .header-logo {
+        max-height: 200px;
+    }
+
+    .navbar-logo {
+        height: 35px;
+    }
+
+    .homepage-header-slide {
+        padding: 1rem 0;
+        margin-top: 60px;
     }
 }
 
