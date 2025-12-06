@@ -21,7 +21,34 @@
     --transition: all 0.3s ease;
     --border-radius: 12px;
 }
-
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        text-align: center;
+        padding: 20px;
+    }
+    .container {
+        max-width: 500px;
+        margin: auto;
+    }
+    img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+    .btn {
+        display: block;
+        padding: 14px 18px;
+        background: #1877f2;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-bottom: 18px;
+    }
 /* Global Styles */
 * {
     margin: 0;
